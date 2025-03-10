@@ -7,25 +7,25 @@
         th, td { border: 1px solid black; padding: 8px; text-align: left; }
         th { background-color: #f2f2f2; }
         .holiday { background-color: #ff9999; color: black; }
-        .next-lesson { font-weight: bold; } /* 粗體樣式 */
+        .next-lesson { font-weight: bold; }
+        .notes { font-size: 14px; margin: 10px 0; }
     </style>
 </head>
-<script>
-    const today = new Date();
-    const rows = document.querySelectorAll('tr');
-    rows.forEach(row => {
-        const dateCell = row.cells[1]?.textContent;
-        if (dateCell) {
-            const lessonDate = new Date(dateCell);
-            if (lessonDate > today && !row.classList.contains('holiday')) {
-                row.classList.add('next-lesson');
-                throw 'found'; // 跳出迴圈
-            }
-        }
-    });
-</script>
 <body>
     <h2>2025 Garmin Golf 高爾夫球社課表（2025年3月19日 - 12月25日）</h2>
+    <div class="notes">
+        <ul>
+            <li>Dream Golf 林口學院資訊：
+                <ul>
+                    <li>地址：<a href="https://maps.app.goo.gl/FvMvWsGxk6dRpmx1A" target="_blank">https://maps.app.goo.gl/FvMvWsGxk6dRpmx1A</a></li>
+                    <li>官網：<a href="https://www.dreamgolf.com.tw/" target="_blank">https://www.dreamgolf.com.tw/</a></li>
+                    <li>IG：<a href="https://www.instagram.com/dreamgolfacademy/" target="_blank">https://www.instagram.com/dreamgolfacademy/</a></li>
+                </ul>
+            </li>
+            <li>遇到颱風放假會延期，以人事行政總處公布為主</li>
+            <li>聯繫人：20900 Allen Cheng 鄭宇倫、26951 Peggy Lin 林庭羽</li>
+        </ul>
+    </div>
     <table>
         <tr>
             <th>堂次</th>
@@ -34,8 +34,7 @@
             <th>指導教練</th>
             <th>備註</th>
         </tr>
-        <tr class="next-lesson"><td>1</td><td>2025/03/19</td><td>高爾夫運動介紹, Dream Golf 學院介紹, 球桿種類介紹, 握桿方式, 站姿設定, 拍球</td><td> Jimmy Chang 張傑明 - Dream Golf Academy院長/高爾夫球國家隊總教練
-        </td><td></td></tr>
+        <tr class="next-lesson"><td>1</td><td>2025/03/19</td><td>高爾夫運動介紹, Dream Golf 學院介紹, 球桿種類介紹, 握桿方式, 站姿設定, 拍球</td><td>Jimmy Chang - Dream Golf Academy 院長 / 高爾夫國家隊總隊長</td><td></td></tr>
         <tr><td>2</td><td>2025/03/27</td><td>握桿方式, 站姿設定, 拍球</td><td></td><td></td></tr>
         <tr class="holiday"><td>-</td><td>2025/04/03</td><td>清明連假</td><td></td><td></td></tr>
         <tr><td>3</td><td>2025/04/10</td><td>胸口轉動與上桿, 上桿站姿維持, 1/4揮桿, 1/2揮桿</td><td></td><td></td></tr>
@@ -69,13 +68,13 @@
         <tr><td>30</td><td>2025/10/23</td><td>Club Path, Face Angle</td><td></td><td></td></tr>
         <tr><td>31</td><td>2025/10/30</td><td>總複習</td><td></td><td></td></tr>
         <tr><td>32</td><td>2025/11/06</td><td>總複習</td><td></td><td></td></tr>
-        <tr><td>33</td><td>2025/11/13</td><td>自由練習</td><td></td><td>Golf Day (Golf Weekend)</td></tr>
-        <tr><td>34</td><td>2025/11/20</td><td>自由練習</td><td></td><td></td></tr>
-        <tr><td>35</td><td>2025/11/27</td><td>自由練習</td><td></td><td></td></tr>
-        <tr><td>36</td><td>2025/12/04</td><td>自由練習</td><td></td><td></td></tr>
-        <tr><td>37</td><td>2025/12/11</td><td>自由練習</td><td></td><td></td></tr>
-        <tr><td>38</td><td>2025/12/18</td><td>自由練習</td><td></td><td></td></tr>
-        <tr><td>39</td><td>2025/12/25</td><td>自由練習</td><td></td><td></td></tr>
+        <tr><td>33、34</td><td>2025/11/13</td><td>自由練習</td><td></td><td>Golf Day (Golf Weekend)<br>當週會安排2堂自由練習，日期待定</td></tr>
+        <tr><td>35</td><td>2025/11/20</td><td>自由練習</td><td></td><td></td></tr>
+        <tr><td>36</td><td>2025/11/27</td><td>自由練習</td><td></td><td></td></tr>
+        <tr><td>37</td><td>2025/12/04</td><td>自由練習</td><td></td><td></td></tr>
+        <tr><td>38</td><td>2025/12/11</td><td>自由練習</td><td></td><td></td></tr>
+        <tr><td>39</td><td>2025/12/18</td><td>自由練習</td><td></td><td></td></tr>
+        <tr><td>40</td><td>2025/12/25</td><td>自由練習</td><td></td><td></td></tr>
     </table>
 </body>
 </html>
